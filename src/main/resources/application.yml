@@ -1,0 +1,16 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /rest
+    server:
+      error:
+        whitelabel:
+          enabled=false:
+            spring:
+              kafka:
+                producer:
+                  value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+            logging.level.org.springframework.cloud.contract: debug
+            kafka:
+              bootstrap-servers: localhost:9092
+
